@@ -1,0 +1,15 @@
+{
+    "elements": [
+        {
+            "id": "mechbook",
+            "unique": true,
+            "label": "A Synopsis of the Infinite Prime Mover",
+            "aspects": {
+                "text": 1,
+                "auctionable": 1
+            },
+            "description": "A thick journal that complexly details non-euclidean and paradoxial mechanics the author saw in dreams, along with a glut of information regarding how one might go about creating such devices, many of its pages marked with indecipherable scrawls. The book seems to have been written by a child with absolutely no mechanical education."
+        }
+    ]
+}
+

@@ -49,6 +49,17 @@
                 "father.horologist.base": 1
             },
             "warmup": 30
+        },
+        {
+            "id": "explore.horologist.open",
+            "actionid": "explore",
+            "label": "A Dealer in Junk",
+            "startdescription": "Somewhere in the city is father's old aquiantance, Oriflamme, who from time to time buys the clocks that do not sell in the shop.",
+            "description": "There are far more than unsold mechanisms here. Something about the items on display calls to me.",
+            "effects": {
+                "locationauctionhouse": 1
+            },
+            "warmup": 30
         }
     ]
 }

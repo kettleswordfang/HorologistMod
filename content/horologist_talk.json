@@ -1,20 +1,110 @@
 {
-    "elements": [
-        {
-            "id": "father.horologist.base",
-            "label": "A Master Clockmaker",
-            "description": "Description of an aloof father who spends more time in his workshop than with his family.",
-            "unique": true,
-            "aspects": {
-                "patron": 1
-            }
-        }
-    ],
-    
     "recipes": [
         {
-            "id": "fatherchat".
-            "label": 
+            "id": "fatherchat",
+            "label": "A Fatherly Discussion",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1
+            },
+            "warmup": 45,
+            "craftable": true,
+            "slots": [
+                {
+                    "id": "Subject",
+                    "label": "Subject",
+                    "description": "A topic of conversation"
+                }
+            ],
+            "startdescription": "'Quickly now, I don't have all day.'",
+            "alt": [
+                {
+                    "id": "fatherchat_explorechat"
+                },
+                {
+                    "id": "fatherchat_health"
+                },
+                {
+                    "id": "fatherchat_reason"
+                },
+                {
+                    "id": "fatherchat_passion_fund",
+                    "chance": 50
+                },
+                {
+                    "id": "fatherchat_passion_failure"
+                }                
+            ]
+        },
         {
+            "id": "fatherchat_explorechat",
+            "label": "Ask What the Store Needs",
+            "actionid": "talk",
+            "maxexecutions": 1,
+            "requirements": {
+                "father.horologist.base": 1,
+                "clockshop.parttime": 1
+            },
+            "startdescription": "'I am sure I can think of something you won't mess up.'",
+            "description": "He has given me junk to sell. An old tome of nonsensical designs that was left in the store by a madman. I have been reduced to a courier.",
+            "effects": {
+                "mechbook": 1
+            },
+            "alt": [
+                {
+                    "id": "explore.horologist.open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "fatherchat_health",
+            "label": "Offer To Clean the Store",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "health": 1
+            },
+            "startdescription": "'If you can be bothered to make the effort, then sure.'",
+            "description": "He seems... proud of you? No, that can't be right.",
+            "effects": {
+                "contentment": 1
+            }
+        },
+        {
+            "id": "fatherchat_reason",
+            "label": "A Request for Resposibility",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "reason": 1
+            },
+            "startdescription": "'What do you think you can manage?'",
+            "description": "Nothing ever satisfies him. No matter the argument you put to him, he simply shuts you down.",
+            "effects": {
+                "dread": 1
+            }
+        },
+        {
+            "id": "fatherchat_passion_fund",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "passion": 1
+            },
+            "description": "Sometimes you can catch him in a good mood and, for a moment, it is like he remembers he has a child.",
+            "effects": {
+                "fund": 1
+            }
+        },
+        {
+            "id": "fatherchat_passion_failure",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "passion": 1
+            },
+            "description": "Sometimes it is like he forgets he has a child."
+        }
     ]
-}
+}   
