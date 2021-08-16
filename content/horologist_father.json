@@ -1,0 +1,13 @@
+{
+    "elements": [
+        {
+            "id": "father.horologist.base",
+            "label": "A Master Clockmaker",
+            "description": "Description of an aloof father who spends more time in his workshop than with his family.",
+            "unique": true,
+            "aspects": {
+                "patron": 1
+            }
+        }
+    ]
+}

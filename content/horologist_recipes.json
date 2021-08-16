@@ -1,0 +1,52 @@
+{
+    "recipes": [
+        {
+            "id": "work.horologist.first",
+            "actionid": "work",
+            "label": "Labour as repetitive as the tick of the second hand.",
+            "startdescription": "Since I was a child I have worked in my father's shop. But I do no more than clean parts and take orders."
+            "description": "No matter how I push myself, my father is never satisfied. But stacking boxes and dealing with customers at least keeps my body occupied, if not my mind.",
+            "requirements": {
+                "clockshop.basic": 1,
+                "reason": 1
+            },
+            "effects": {
+                "funds": 1,
+                "health": 1
+            },
+            "warmup": 10,
+            "craftable": true,
+            "maxexecutions": 1,
+            "alt" : [
+                {
+                    "id": "dream.horologist.open",
+                    "additional": true
+                },
+                    "id": "talk.horologist.open",
+                    "additional": true
+            ]
+        },
+        {
+            "id": "dream.horologist.open",
+            "actionid": "dream",
+            "label": "More Machine Than Human",
+            "startdescription": "The ticking of the clocks pervade my dreams, matching with the beat of my heart.",
+            "description": "Sometimes, in my dreams, my heartbeat is the last sound that I hear before I wake. But sometimes, that beat is replaced with something else and I awake from from the constraints of the emotional toil of the day, refreshed in spirit.",
+            "effects": {
+                "passion": 1
+            },
+            "warmup": 60
+        },
+        {
+            "id": "talk.horologist.open",
+            "actionid": "talk",
+            "label": "Responsibility, But Not Trust",
+            "startdescription": "Father hints at one day giving over the store to me, but I cannot help but feel this will never happen...",
+            "description": "He doesn't trust me. But he never gives me the opportunities to earn that trust. And so the hour clock comes back to 12 but the date never changes.",
+            "effects": {
+                "father.horologist.base": 1
+            }.
+            "warmup": 30
+        }
+    ]
+}
