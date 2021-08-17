@@ -1,0 +1,68 @@
+{
+    "recipes": [
+        {
+            "id": "work.horologist.first",
+            "actionid": "work",
+            "label": "Labour as repetitive as the tick of the second hand.",
+            "startdescription": "Since I was a child I have worked in my father's shop. But I do no more than clean parts and take orders.",
+            "description": "No matter how I push myself, my father is never satisfied. But stacking boxes and dealing with customers at least keeps my body occupied, if not my mind.",
+            "requirements": {
+                "clockshop.parttime": 1,
+                "reason": 1
+            },
+            "effects": {
+                "funds": 1,
+                "health": 1
+            },
+            "warmup": 30,
+            "craftable": true,
+            "maxexecutions": 1,
+            "alt" : [
+                {
+                    "id": "dream.horologist.open",
+                    "additional": true
+                },
+                {
+                    "id": "talk.horologist.open",
+                    "additional": true
+                }
+            ]
+        },
+        {
+            "id": "work.horologist.parttime",
+            "actionid": "work",
+            "label": "As repetitive as the tick of the second hand.",
+            "startdescription": "I do no more than clean parts and take orders.",
+            "description": "No matter how I push myself, my father is never satisfied.",
+            "requirements": {
+                "clockshop.parttime": 1,
+                "ability": 1
+            },
+            "effects": {
+                "funds": 1
+                
+            },
+            "warmup": 60,
+            "craftable": true,
+            "linked" : [
+                {
+                    "id": "clockshop_upgradetofull",
+                    "chance": 33
+                }
+            ]
+        },
+        {
+            "id": "clockshop_upgradetofull",
+            "actionid": "work",
+            "label": "Full-time Employment",
+            "startdescription": "You have impressed your father with your work ethic.",
+            "description": "You hold in your hands the keys to the workshop. An iota of trust.",
+            "warmup": 30,
+            "effects": {
+                "funds": 2,
+                "clockshop.parttime": -1,
+                "clockshop.fulltime": 1
+            }
+        }
+    ]
+}

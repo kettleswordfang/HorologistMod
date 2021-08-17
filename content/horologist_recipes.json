@@ -1,34 +1,6 @@
 {
     "recipes": [
         {
-            "id": "work.horologist.first",
-            "actionid": "work",
-            "label": "Labour as repetitive as the tick of the second hand.",
-            "startdescription": "Since I was a child I have worked in my father's shop. But I do no more than clean parts and take orders.",
-            "description": "No matter how I push myself, my father is never satisfied. But stacking boxes and dealing with customers at least keeps my body occupied, if not my mind.",
-            "requirements": {
-                "clockshop.parttime": 1,
-                "reason": 1
-            },
-            "effects": {
-                "funds": 1,
-                "health": 1
-            },
-            "warmup": 10,
-            "craftable": true,
-            "maxexecutions": 1,
-            "alt" : [
-                {
-                    "id": "dream.horologist.open",
-                    "additional": true
-                },
-                {
-                    "id": "talk.horologist.open",
-                    "additional": true
-                }
-            ]
-        },
-        {
             "id": "dream.horologist.open",
             "actionid": "dream",
             "label": "More Machine Than Human",
@@ -103,9 +75,9 @@
         },
         {
             "id": "clockshop_insanity",
-            "actionid": "",
+            "actionid": "clockshop_insanity",
             "label": "clockshop_insanity",
-            "startdescription": "He has run into the workshop with the blueprint...",
+            "startdescription": "He has taken the blueprint and locked the door to the workshop. But I have made my own key...",
             "description": "base end clockshop_insanity description.",
             "warmup": 15,
             "slots": [
@@ -113,8 +85,35 @@
                     "id": "workshop_request",
                     "label": "The Workshop",
                     "description": "Follow him in?"
-                }
+                },
+            ],
+            "linked": [
+                { "id": "clockshop_insanity_success" },
+                { "id": "clockshop_insanity_failure" }
             ]
+        },
+        {
+            "id": "clockshop_insanity_success",
+            "actionid": "clockshop_insanity",
+            "label": "insanity success!",
+            "startdescription": "I will show him the truth of how mechnical bees fly, of how mechanical men will no longer feel. I will show him everything that is possible and more. His mind will snap.",
+            "description": "Completed insanity success msg.",
+            "warmup": 30,
+            "effects": {
+                "father.horologist.base": -1,
+                "father.horologist.insane": 1,
+                "notoriety": 1
+            }
+        },
+        {
+            "id": "clockshop_insanity_failure",
+            "actionid": "clockshop_insanity",
+            "label": "insanity failure!",
+            "description": "insanity failure msg - he's angry, you're wasting time.",
+            "effects": {
+                "father.horologist.base": -1,
+                "father.horologist.angry": 1
+            }
         }
-    ]   
+    ]
 }

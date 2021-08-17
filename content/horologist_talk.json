@@ -35,6 +35,9 @@
                     "id": "fatherchat_passion_failure"
                 },
                 {
+                    "id": "fatherchat_demotion"
+                },
+                {
                     "id": "fatherchat_blueprint1"
                 },
                 {
@@ -116,6 +119,55 @@
             "description": "Sometimes it is like he forgets he has a child."
         },
         {
+            "id": "fatherchat_demotion",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "clockshop.demotion": 1
+            },
+            "startdescription": "Perhaps I could convince him of my worth...",
+            "linked": [
+                { 
+                    "id": "demotion.request"
+                }
+            ]
+        },
+        {
+            "id": "demotion.request",
+            "actionid": "talk",
+            "startdescription": "'Fine. Show me that you can be trusted.'",
+            "description": "I was not able to convince him of anything.",
+            "warmup": 30,
+            "slots": [
+                {
+                    "id": "demotion_solve",
+                    "label": "Persuasion",
+                    "required": {
+                        "reason": 1
+                    },
+                    "actionid": "talk"
+                },
+            ],
+            "linked": [
+                { 
+                    "id": "demotion_solve_success" 
+                }
+            ]
+        },
+        {
+            "id": "demotion_solve_success",
+            "actionid": "talk",
+            "label": "Another Chance to Fail",
+            "description": "He has reopened the workshop. I will not starve today.",
+            "requirements": {
+                "reason": 1
+            },
+            "effects": {
+                "clockshop.demotion": -1,
+                "clockshop.parttime": 1
+            }
+        },
+        {
             "id": "fatherchat_blueprint1",
             "actionid": "talk",
             "requirements": {
@@ -144,9 +196,6 @@
             },
             "startdescription": "show him the last blueprint.",
             "description": "fatherchat_insanity end.",
-            "effects": {
-                "father.horologist.base": -1
-            },
             "alt": [
                 {
                     "id": "clockshop_insanity",

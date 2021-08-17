@@ -10,7 +10,7 @@
                 "clockshop.parttime": 1,
                 "funds": 50
             },
-            "image": "forge",
+            "image": "legacy_horologist",
             "fromending": "-",
             "availableWithoutEndingMatch": true,
             "startingverbid": "work",

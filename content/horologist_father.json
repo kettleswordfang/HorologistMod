@@ -6,7 +6,30 @@
             "description": "Description of an aloof father who spends more time in his workshop than with his family.",
             "unique": true,
             "aspects": {
-                "patron": 1
+                "patron": 1,
+                "mortal": 1
+            }
+        },
+        {
+            "id": "father.horologist.angry",
+            "label": "An Angry Clockmaker",
+            "description": "Your father has locked himself away in his study and refuses to speak with you.",
+            "unique": true,
+            "aspects": {
+                "patron": 1,
+                "mortal": 1
+            },
+            "lifetime": 60,
+            "decayto": "father.horologist.angry",
+            "resaturate": true
+        },
+        {
+            "id": "father.horologist.insane",
+            "label": "An Broken Clockmaker",
+            "description": "His internal mechanics have broken and no longer keep time. Some days he runs forward, too fast, and some days he runs back. He is right less than twice a day. His health slowly fades.",
+            "unique": true,
+            "aspects": {
+                "mortal": 1
             }
         }
     ]
