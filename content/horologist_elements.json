@@ -6,9 +6,40 @@
             "label": "A Synopsis of the Infinite Prime Mover",
             "aspects": {
                 "text": 1,
+                "way": 1,
                 "auctionable": 1
             },
             "description": "A thick journal that complexly details non-euclidean and paradoxial mechanics the author saw in dreams, along with a glut of information regarding how one might go about creating such devices, many of its pages marked with indecipherable scrawls. The book seems to have been written by a child with absolutely no mechanical education."
+        },
+        {
+            "id": "mechblueprint1",
+            "unique": true,
+            "label": "First Blueprint Placeholder",
+            "aspects": {
+                "text": 1
+            },
+            "description": "Placeholder text for the first blueprint."
+        },
+        {
+            "id": "mechblueprint2",
+            "unique": true,
+            "label": "Second Blueprint Placeholder",
+            "aspects": {
+                "text": 1,
+                "location": 1
+            },
+            "description": "Placeholder text for the second location blueprint."
+        },
+        {
+            "id": "mechblueprint3",
+            "unique": true,
+            "label": "Third Blueprint Placeholder",
+            "aspects": {
+                "text": 1,
+                "location": 1,
+                "forge": 1
+            },
+            "description": "Placeholder text for the final blueprint."
         }
     ]
 }

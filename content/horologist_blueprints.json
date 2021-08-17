@@ -1,0 +1,64 @@
+{
+    "recipes": [
+        {
+            "id": "study.blueprint.first",
+            "actionid": "study",
+            "label": "Study the Blueprint",
+            "startdescription": "With enough time and patience this could be solved...",
+            "description": "None of this should make sense! This should not be possible!",
+            "requirements": {
+                "mechblueprint1": 1
+            },
+            "effects": {
+                "fascination": 1,
+                "mechblueprint1": -1,
+                "mechblueprint2": 1
+            },
+            "craftable": true,
+            "warmup": 60
+        },
+        {
+            "id": "dream.blueprint1",
+            "actionid": "dream",
+            "label": "BLUEPRINT1 + DREAM",
+            "startdescription": "Placeholder text.",
+            "description": "You fall asleep pouring over the designs and dream of your heartbeat replaced with loud ticking. It calms you.",
+            "requirements": {
+                "mechblueprint1": 1
+            },
+            "effects": {
+                "contentment": 1
+            },
+            "craftable": true,
+            "warmup": 60
+        },
+        {
+            "id": "dream.blueprint2",
+            "actionid": "dream",
+            "label": "BLUEPRINT2 + DREAM",
+            "startdescription": "Placeholder text.",
+            "description": "You fall asleep pouring over the designs and dream you are walking down the copper pathways and circuits.",
+            "requirements": {
+                "mechblueprint2": 1
+            },
+            "craftable": true,
+            "warmup": 60
+        },
+        {
+            "id": "explore.blueprint",
+            "actionid": "explore",
+            "label": "BLUEPRINT2 + EXPLORE",
+            "startdescription": "Perhaps if you followed the circuits on a map?",
+            "description": "You travel up and down each street, following the layout of the circuitry. You understand now. This is not a design for a new human. It is a design for an upgrade.",
+            "requirements": {
+                "mechblueprint2": 1
+            },
+            "effects": {
+                "mechblueprint2": -1,
+                "mechblueprint3": 1
+            },
+            "craftable": true,
+            "warmup": 45
+        }
+    ]
+}

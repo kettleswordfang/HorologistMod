@@ -33,7 +33,16 @@
                 },
                 {
                     "id": "fatherchat_passion_failure"
-                }                
+                },
+                {
+                    "id": "fatherchat_blueprint1"
+                },
+                {
+                    "id": "fatherchat_blueprint2"
+                },
+                {
+                    "id": "fatherchat_insanity"
+                }
             ]
         },
         {
@@ -83,7 +92,7 @@
             "description": "Nothing ever satisfies him. No matter the argument you put to him, he simply shuts you down.",
             "effects": {
                 "dread": 1
-            }
+            }   
         },
         {
             "id": "fatherchat_passion_fund",
@@ -105,6 +114,45 @@
                 "passion": 1
             },
             "description": "Sometimes it is like he forgets he has a child."
+        },
+        {
+            "id": "fatherchat_blueprint1",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "mechblueprint1": 1,
+            },
+            "description": "'This is an afront to both humanity and horology.'",
+            "comments": "should replace father with angry father, decay60."
+        },
+        {
+            "id": "fatherchat_blueprint2",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "mechblueprint2": 1
+            },
+            "description": "'This is an afront to both humanity and horology.'",
+            "comments": "should replace father with angry father, decay60."
+        },
+        {
+            "id": "fatherchat_insanity",
+            "actionid": "talk",
+            "requirements": {
+                "father.horologist.base": 1,
+                "mechblueprint3": 1
+            },
+            "startdescription": "show him the last blueprint.",
+            "description": "fatherchat_insanity end.",
+            "effects": {
+                "father.horologist.base": -1
+            },
+            "alt": [
+                {
+                    "id": "clockshop_insanity",
+                    "additional": true
+                }
+            ]
         }
     ]
 }   

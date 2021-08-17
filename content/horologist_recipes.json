@@ -60,6 +60,61 @@
                 "locationauctionhouse": 1
             },
             "warmup": 30
+        },
+        {
+            "id": "dream.mechbook.first",
+            "actionid": "dream",
+            "label": "Read to Fall Asleep",
+            "startdescription": "This nonsense seems like the perfect thing to send you to sleep.",
+            "description": "You dream of a world that is made from clockwork, the sun moving across the sky on iron tracks as it hisses steam. On a moving pedestal is the book you were just reading. It unfolds like copper origami and reveals its secrets to you.",
+            "requirements": {
+                "mechbook": 1
+            },
+            "warmup": 60,
+            "craftable": true,
+            "maxexecutions": 1,
+            "alt": [
+                {
+                    "id": "study.horologist.open",
+                    "additional":true
+                }
+            ]
+        },
+        {
+            "id": "dream.mechbook.standard",
+            "actionid": "dream",
+            "label": "Read to Fall Asleep",
+            "startdescription": "This nonsense seems like the perfect thing to send you to sleep.",
+            "description": "You dream of a world that is made from clockwork, the sun moving across the sky on iron tracks as it hisses steam. You wake up unsettled.",
+            "warmup": 30,
+            "craftable": true
+        },
+        {
+            "id": "study.horologist.open",
+            "actionid": "study",
+            "label": "A Secret in the Synopsis",
+            "startdescription": "In your dream the book unfolded. Perhaps it can in the waking world, too...",
+            "description": "Hidden within the cover was a strange blueprint. [needs more text]",
+            "effects": {
+                "mechblueprint1": 1
+            },
+            "warmup": 30,
+            "craftable": true
+        },
+        {
+            "id": "clockshop_insanity",
+            "actionid": "",
+            "label": "clockshop_insanity",
+            "startdescription": "He has run into the workshop with the blueprint...",
+            "description": "base end clockshop_insanity description.",
+            "warmup": 15,
+            "slots": [
+                {
+                    "id": "workshop_request",
+                    "label": "The Workshop",
+                    "description": "Follow him in?"
+                }
+            ]
         }
-    ]
+    ]   
 }
