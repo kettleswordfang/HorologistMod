@@ -1,28 +1,6 @@
 {
     "recipes": [
         {
-            "id": "clockshophintP",
-            "actionid": "work",
-            "label": "Labour as repetitive as the tick of the second hand.",
-            "requirements": {
-                "clockshop.parttime": 1
-            },
-            "startdescription": "I do no more than clean parts and take orders.",
-            "craftable": false,
-            "hintonly": true
-        },
-        {
-            "id": "clockshophintF",
-            "actionid": "work",
-            "label": "Spend Time on Labour or Research?",
-            "requirements": {
-                "clockshop.fulltime": 1
-            },
-            "startdescription": "I could expend my energies on repairs and sales, or change the sign on the door to closed and devote my time to research.",
-            "craftable": false,
-            "hintonly": true
-        },
-        {
             "id": "work.horologist.first",
             "actionid": "work",
             "label": "Labour as repetitive as the tick of the second hand.",
@@ -90,7 +68,7 @@
             }
         },
         {
-            "id": "work.horologist.fulltime",
+            "id": "work.horologist.fulltimeR",
             "actionid": "work",
             "label": "As repetitive as the tick of the second hand.",
             "startdescription": "I take orders, repair broken mechanisms, clean, sell, repeat.",
@@ -100,7 +78,23 @@
             },
             "requirements": {
                 "clockshop.fulltime": 1,
-                "reason": 1,
+                "reason": 1
+            },
+            "effects": { "funds": 1 },
+            "warmup": 50,
+            "craftable": true
+        },
+        {
+            "id": "work.horologist.fulltimeH",
+            "actionid": "work",
+            "label": "As repetitive as the tick of the second hand.",
+            "startdescription": "I take orders, repair broken mechanisms, clean, sell, repeat.",
+            "description": "I have done an honest day's work, that at least I can say.",
+            "aspects": {
+                "employment": 1
+            },
+            "requirements": {
+                "clockshop.fulltime": 1,
                 "health": 1
             },
             "effects": { "funds": 1 },
@@ -119,10 +113,9 @@
             },
             "craftable": true,
             "warmup": 30,
-            "alt": [
+            "linked": [
                 {
-                    "id": "research.clockshop.first",
-                    "additional": true 
+                    "id": "research.clockshop.first"
                 }
             ]
         },
@@ -179,7 +172,8 @@
             "aspects": { "employment": 1 },
             "requirements": {
                 "workshop": 1,
-                "reason": 1
+                "reason": 1,
+                "funds": -1
             },
             "effects": { "funds": 1 },
             "warmup": 50,
@@ -194,7 +188,9 @@
             "aspects": { "employment": 1 },
             "requirements": {
                 "workshop": 1,
-                "health": 1
+                "health": 1,
+                "funds": -1,
+                "hq.potential": -1
             },
             "effects": { "funds": 1 },
             "warmup": 50,
@@ -215,6 +211,108 @@
             "deckeffects": { "clockshop.gadgetlist.basic": 1 },
             "warmup": 50,
             "craftable": true
+        },
+        {
+            "id": "work.horologist.warehouse",
+            "actionid": "work",
+            "label": "The Workshop Could Be Bigger...",
+            "startdescription": "Perhaps I could just move the store entirely?",
+            "aspects": { "employment": 1 },
+            "craftable": true,
+            "requirements": {
+                "clockshop.upgraded": 1,
+                "health": 1,
+                "funds": 1
+            },
+            "linked": [
+                { "id": "warehousemove_leadup" }
+            ]
+        },
+        {
+            "id": "warehousemove_leadup",
+            "actionid": "work",
+            "label": "A Possible Upgrade",
+            "startdescription": "I need to find  new location.",
+            "description": "I guess I couldn't find anywhere that wasn't already taken.",
+            "warmup": 30,
+            "slots": [
+                {
+                    "id": "location.clockshopmove",
+                    "label": "Somewhere Abandoned",
+                    "required": { "hq.potential": 1 }
+                }
+            ],
+            "linked": [ 
+                { 
+                    "id": "warehousemove_explore"
+                }
+            ]
+        },
+        {
+            "id": "warehousemove_explore",
+            "actionid": "work",
+            "label": "A Possible Upgrade",
+            "startdescription": "This place has potential...",
+            "description": "It doesn't fit my purposes. I need something different.",
+            "warmup": 15,
+            "requirements":
+                { 
+                    "hq.potential": 1
+                },
+            "linked": 
+                [ 
+                    { 
+                        "id": "warehousemove_funds"
+                    },
+                ]
+        },
+        {
+            "id": "warehousemove_funds",
+            "actionid": "work",
+            "label": "This is Perfect!",
+            "startdescription": "It has all the space I need. Now I just need help moving everything. This isn't going to be cheap.",
+            "requirements": 
+                {
+                    "hq.warehouse.potential": 1,
+                    "clockshop.upgraded": 1,
+                    "fatigue": 1
+                },
+            "warmup": 15,
+            "slots": [
+                {
+                    "id": "warehousefunds1",
+                    "label": "Moving isn't cheap.",
+                    "required": { "funds": 1 }
+                }
+            ],
+            "linked": [
+                { "id": "warehousemove_success" }
+            ]
+        },
+        {
+            "id": "warehousemove_success",
+            "actionid": "work",
+            "label": "A New Workshop",
+            "startdescription": "Now I just need to set everything up again.",
+            "description": "warehouse move success!",
+            "warmup": 30,
+            "requirements": { "funds": 1 },
+            "effects": {
+                "clockshop.upgraded": -1,
+                "clockshop.warehouse": 1,
+                "contentment": 1
+            }
         }
     ]
 }
+
+
+
+
+
+
+
+
+
+
+

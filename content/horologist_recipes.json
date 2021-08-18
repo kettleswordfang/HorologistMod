@@ -57,8 +57,9 @@
             "actionid": "dream",
             "label": "Read to Fall Asleep",
             "startdescription": "This nonsense seems like the perfect thing to send you to sleep.",
-            "description": "You dream of a world that is made from clockwork, the sun moving across the sky on iron tracks as it hisses steam. You wake up unsettled.",
-            "warmup": 30,
+            "description": "You dream of a world that is made from clockwork, the sun moving across the sky on iron tracks as it hisses steam.",
+            "requirements": { "mechbook": 1 },
+            "warmup": 60,
             "craftable": true
         },
         {

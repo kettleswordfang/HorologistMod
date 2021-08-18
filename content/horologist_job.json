@@ -61,7 +61,6 @@
             "aspects": {
                 "job": 1,
                 "workshop": 1
-            
             },
             "slots": [
                 {
@@ -79,14 +78,59 @@
                     "label": "More?",
                     "required": {
                         "reason": 1,
+                        "health": 1,
                         "funds": 1
                     },
-                    "actionid": "work"
+                    "actionid": "work",
+                    "consumes": true
                 }
             ],
             "label": "An Upgraded Workshop",
             "description": "I can do more here now but, also, I can choose to do just enough.",
             "xtriggers": { "employment": "clockshop.upgraded" }
+        },
+        {
+            "id": "clockshop.warehouse",
+            "icon": "clockshopimagetemporary",
+            "aspects": {
+                "job": 1,
+                "workshop": 1
+            },
+            "slots": [
+                {
+                    "id": "workshopmaterial1",
+                    "label": "Materials",
+                    "required": {
+                        "reason": 1,
+                        "health": 1,
+                        "clockworkmarks": 1
+                    },
+                    "actionid": "work"
+                },
+                {
+                    "id": "workshopmaterial2",
+                    "label": "Tools",
+                    "required": {
+                        "reason": 1,
+                        "funds": 1,
+                        "tool": 1
+                    },
+                    "actionid": "work",
+                    "consumes": true
+                },
+                {
+                    "id": "workshopmaterial3",
+                    "label": "More?",
+                    "required": {
+                        "clockworkmarks": 1,
+                        "lore": 1
+                    },
+                    "actionid": "work"
+                },
+            ],
+            "label": "An Expanded Workshop",
+            "description": "I could make incredible things here.",
+            "xtriggers": { "employment": "clockshop.warehouse" }
         }
     ]
 }

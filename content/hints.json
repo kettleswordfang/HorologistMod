@@ -1,0 +1,58 @@
+    {
+    "recipes": [
+        {
+            "id": "work.generaldesire.hint",
+            "requirements": {
+                "desire": 1,
+                "clockworkmarks": -1
+            }
+        },
+        {
+            "id": "clockshophintP",
+            "actionid": "work",
+            "label": "Labour as repetitive as the tick of the second hand.",
+            "requirements": {
+                "clockshop.parttime": 1
+            },
+            "startdescription": "I do no more than clean parts and take orders.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "clockshophintF",
+            "actionid": "work",
+            "label": "Spend Time on Labour or Research?",
+            "requirements": {
+                "clockshop.fulltime": 1
+            },
+            "startdescription": "I could expend my energies on repairs and sales, or change the sign on the door to closed and devote my time to research.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "clockshophintU",
+            "actionid": "work",
+            "label": "Spend Time on Labour or Research?",
+            "requirements": {
+                "clockshop.upgraded": 1,
+                "clockworkmarks": -1
+            },
+            "startdescription": "I could expend my energies on repairs and sales, or change the sign on the door to closed and devote my time to research.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "clockshopwarehousehintDesire",
+            "actionid": "work",
+            "label": "Move the Workshop?",
+            "comments": "this hint doesn't actually work...",
+            "requirements": {
+                "clockshop.upgraded": 1,
+                "clockworkmarks": 1
+            },
+            "startdescription": "If I found somewhere that had the potential for a workshop, and the funds to move there...",
+            "craftable": false,
+            "hintonly": true
+        },
+    ]
+}
