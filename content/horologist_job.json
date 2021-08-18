@@ -18,11 +18,9 @@
             ],
             "label": "Part Time Clockmaker",
             "description": "All I do is clean parts and take orders. My father does not let me do more. [If you don't attend this job regularly, you might suffer a demotion.]",
-            "xtriggers": {
-                "employment": "clockshop.parttime"
-            },
             "lifetime": 60,
-            "decayto": "clockshop.demotion"
+            "decayto": "clockshop.demotion",
+            "xtriggers": { "employment": "clockshop.parttime" }
         },
         {
             "id": "clockshop.demotion",
@@ -44,14 +42,15 @@
                     "label": "Concentration",
                     "required": {
                         "reason": 1,
-                        "health": 1
+                        "health": 1,
+                        "clockworkmarks": 1
                     },
                     "actionid": "work"
                 }
             ],
             "label": "Full Time Clockmaker",
             "description": "My day is filled with meaningless repairs.",
-            "xtriggers": { "employment": "clockshop.fulltime" },
+            "xtriggers": { "employment": "clockshop.fulltime" }
         }
     ]
 }

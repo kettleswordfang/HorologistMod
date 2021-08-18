@@ -25,12 +25,13 @@
         },
         {
             "id": "father.horologist.insane",
-            "label": "An Broken Clockmaker",
+            "label": "A Broken Clockmaker",
             "description": "His internal mechanics have broken and no longer keep time. Some days he runs forward, too fast, and some days he runs back. He is right less than twice a day. His health slowly fades.",
             "unique": true,
             "aspects": {
                 "mortal": 1
-            }
+            },
+            "lifetime": 300
         }
     ]
 }

@@ -34,6 +34,9 @@
             "label": "As repetitive as the tick of the second hand.",
             "startdescription": "I do no more than clean parts and take orders.",
             "description": "No matter how I push myself, my father is never satisfied.",
+            "aspects": {
+                "employment": 1
+            },
             "requirements": {
                 "clockshop.parttime": 1,
                 "ability": 1
@@ -47,7 +50,7 @@
             "linked" : [
                 {
                     "id": "clockshop_upgradetofull",
-                    "chance": 33
+                    "chance": 1
                 }
             ]
         },

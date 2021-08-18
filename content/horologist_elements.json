@@ -40,6 +40,21 @@
                 "forge": 1
             },
             "description": "Placeholder text for the final blueprint."
+        },
+        {
+            "id": "horologistdesire1",
+            "label": "Temptation: Clockwork",
+            "aspects": {
+                "desire": 1,
+                "clockworkmarks": 1
+            },
+            "description": "I can become the perfect blend of organic and inorganic. Beyond human."
+        },
+        {
+            "id": "clockworkmarks",
+            "label": "More Machine than Human",
+            "isAspect": true,
+            "description": "What I seek is beyond immortality. Beyond pain. Beyond emotion."
         }
     ]
 }

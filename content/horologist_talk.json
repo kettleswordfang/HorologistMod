@@ -136,7 +136,7 @@
             "id": "demotion.request",
             "actionid": "talk",
             "startdescription": "'Fine. Show me that you can be trusted.'",
-            "description": "I was not able to convince him of anything.",
+            "comments": "this desc still shows when success runs!",
             "warmup": 30,
             "slots": [
                 {
@@ -150,7 +150,7 @@
             ],
             "linked": [
                 { 
-                    "id": "demotion_solve_success" 
+                    "id": "demotion_solve_success"
                 }
             ]
         },
@@ -159,9 +159,7 @@
             "actionid": "talk",
             "label": "Another Chance to Fail",
             "description": "He has reopened the workshop. I will not starve today.",
-            "requirements": {
-                "reason": 1
-            },
+            "requirements": { "concentration": 1 },
             "effects": {
                 "clockshop.demotion": -1,
                 "clockshop.parttime": 1
@@ -194,6 +192,10 @@
                 "father.horologist.base": 1,
                 "mechblueprint3": 1
             },
+            "effects": {
+                    "father.horologist.base": -1,
+                    "mechblueprint3": -1
+                },
             "startdescription": "show him the last blueprint.",
             "description": "fatherchat_insanity end.",
             "alt": [
