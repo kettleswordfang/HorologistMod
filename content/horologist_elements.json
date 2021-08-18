@@ -1,6 +1,12 @@
 {
     "elements": [
         {
+            "id": "workshop",
+            "label": "Workshop",
+            "isAspect": true,
+            "description": "A have built myself a place to build more."
+        },
+        {
             "id": "mechbook",
             "unique": true,
             "label": "A Synopsis of the Infinite Prime Mover",

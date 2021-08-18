@@ -1,0 +1,17 @@
+{
+    "decks": [
+        {
+            "id": "clockshop.gadgetlist.basic",
+            "label": "Basic Gadget List",
+            "description": "",
+            "spec": [
+                "basicgadget",
+                "basicgadget",
+                "basicgadget",
+                "basicgadget",
+                "improvedgadget"
+            ],
+            "resetonexhaustion": true
+        }
+    ]
+}

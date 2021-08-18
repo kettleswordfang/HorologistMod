@@ -1,0 +1,16 @@
+{
+    "elements": [
+        {
+            "id": "basicgadget",
+            "label": "An Odd Gadget",
+            "aspects": { "auctionable": 1 },
+            "description": "It doesn't do much but it's pretty. It has to be worth something to someone, just not to me."
+        },
+        {
+            "id": "improvedgadget",
+            "label": "An Improved Gadget",
+            "aspects": { "auctionable": 2 },
+            "description": "This is some of my better work. But I cannot use it myself. If I were to give it to Oriflamme maybe I could see if I can make my material cost back."
+        }
+    ]
+}

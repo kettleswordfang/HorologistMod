@@ -2,16 +2,18 @@
     "elements": [
         {
             "id": "clockshop.parttime",
+            "icon": "clockshopimagetemporary",
             "aspects": {
                 "job": 1
             },
             "slots": [
                 {
-                    "id": "concentration",
-                    "label": "Concentration",
+                    "id": "workshopmaterial1",
+                    "label": "Materials",
                     "required": {
                         "reason": 1,
-                        "health": 1
+                        "health": 1,
+                        "funds": 1
                     },
                     "actionid": "work"
                 }
@@ -33,13 +35,14 @@
         },
         {
             "id": "clockshop.fulltime",
+            "icon": "clockshopimagetemporary",
             "aspects": {
                 "job": 1
             },
             "slots": [
                 {
-                    "id": "concentration",
-                    "label": "Concentration",
+                    "id": "workshopmaterial1",
+                    "label": "Materials",
                     "required": {
                         "reason": 1,
                         "health": 1,
@@ -51,6 +54,39 @@
             "label": "Full Time Clockmaker",
             "description": "My day is filled with meaningless repairs.",
             "xtriggers": { "employment": "clockshop.fulltime" }
+        },
+        {
+            "id": "clockshop.upgraded",
+            "icon": "clockshopimagetemporary",
+            "aspects": {
+                "job": 1,
+                "workshop": 1
+            
+            },
+            "slots": [
+                {
+                    "id": "workshopmaterial1",
+                    "label": "Materials",
+                    "required": {
+                        "reason": 1,
+                        "health": 1,
+                        "clockworkmarks": 1
+                    },
+                    "actionid": "work"
+                },
+                {
+                    "id": "workshopmaterial2",
+                    "label": "More?",
+                    "required": {
+                        "reason": 1,
+                        "funds": 1
+                    },
+                    "actionid": "work"
+                }
+            ],
+            "label": "An Upgraded Workshop",
+            "description": "I can do more here now but, also, I can choose to do just enough.",
+            "xtriggers": { "employment": "clockshop.upgraded" }
         }
     ]
 }

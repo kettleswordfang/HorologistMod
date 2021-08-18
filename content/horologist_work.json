@@ -1,6 +1,17 @@
 {
     "recipes": [
         {
+            "id": "clockshophint1",
+            "actionid": "work",
+            "label": "Spend Time on Labour or Research?",
+            "requirements": {
+                "clockshop.fulltime": 1
+            },
+            "startdescription": "I could expend my energies on repairs and sales, or change the sign on the door to closed and devote my time to research.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
             "id": "work.horologist.first",
             "actionid": "work",
             "label": "Labour as repetitive as the tick of the second hand.",
@@ -50,7 +61,7 @@
             "linked" : [
                 {
                     "id": "clockshop_upgradetofull",
-                    "chance": 1
+                    "chance": 33
                 }
             ]
         },
@@ -66,6 +77,133 @@
                 "clockshop.parttime": -1,
                 "clockshop.fulltime": 1
             }
+        },
+        {
+            "id": "work.horologist.fulltime",
+            "actionid": "work",
+            "label": "As repetitive as the tick of the second hand.",
+            "startdescription": "I take orders, repair broken mechanisms, clean, sell, repeat.",
+            "description": "I have done an honest day's work, that at least I can say.",
+            "aspects": {
+                "employment": 1
+            },
+            "requirements": {
+                "clockshop.fulltime": 1,
+                "reason": 1,
+                "health": 1
+            },
+            "effects": { "funds": 1 },
+            "warmup": 50,
+            "craftable": true
+        },
+        {
+            "id": "research.horologist.fulltime",
+            "actionid": "work",
+            "label": "A Workshop in the Back Room",
+            "startdescription": "I will close the shop, and set up the workshop to suit my own needs instead of those of my father. [This may take some time.]",
+            "aspects": { "employment": 1 },
+            "requirements": {
+                "clockshop.fulltime": 1,
+                "clockworkmarks": 1
+            },
+            "craftable": true,
+            "warmup": 30,
+            "alt": [
+                {
+                    "id": "research.clockshop.first",
+                    "additional": true 
+                }
+            ]
+        },
+        {
+            "id": "research.clockshop.first",
+            "actionid": "work",
+            "label": "Additional Tools & Materials",
+            "startdescription": "The workshop does not have everything I need.",
+            "warmup": 30,
+            "slots": [
+                {
+                    "id": "workshop_request_funds",
+                    "label": "Additional Funds",
+                    "required": { "funds": 1 },
+                    "actionid": "work"
+                }
+            ],
+            "linked": [
+                {
+                    "id": "workshop_request_funds_success",
+                    "chance": 50
+                },
+                { 
+                    "id": "workshop_request_funds_failure"
+                }
+            ]
+        },
+        {
+            "id": "workshop_request_funds_success",
+            "actionid": "work",
+            "label": "An Upgraded Workshop",
+            "startdescription": "I will do what I can with what I have...",
+            "description": "Everything I need is now in place. There are things that I can now build that I could not before.",
+            "warmup": 30,
+            "effects": {
+                "clockshop.fulltime": -1,
+                "clockshop.upgraded": 1
+            }
+        },
+        {
+            "id": "workshop_request_funds_failure",
+            "actionid": "work",
+            "label": "An Upgraded Workshop",
+            "startdescription": "I will do what I can with what I have...",
+            "description": "Some things are hard to build, hard to source. All I can do is brush myself off and try again.",
+            "warmup": 30
+        },
+        {
+            "id": "work.horologist.upgraded_fund1R",
+            "actionid": "work",
+            "label": "As repetitive as the tick of the second hand.",
+            "startdescription": "I take orders, repair broken mechanisms, clean, sell, repeat. But the work I do is now for me.",
+            "description": "I have done an honest day's work, that at least I can say.",
+            "aspects": { "employment": 1 },
+            "requirements": {
+                "workshop": 1,
+                "reason": 1
+            },
+            "effects": { "funds": 1 },
+            "warmup": 50,
+            "craftable": true 
+        },
+        {
+            "id": "work.horologist.upgraded_fund1H",
+            "actionid": "work",
+            "label": "As repetitive as the tick of the second hand.",
+            "startdescription": "I take orders, repair broken mechanisms, clean, sell, repeat. But the work I do is now for me.",
+            "description": "I have done an honest day's work, that at least I can say.",
+            "aspects": { "employment": 1 },
+            "requirements": {
+                "workshop": 1,
+                "health": 1
+            },
+            "effects": { "funds": 1 },
+            "warmup": 50,
+            "craftable": true 
+        },
+        {
+            "id": "work.horologist.upgraded_gadget",
+            "actionid": "work",
+            "label": "A Workshop in the Back Room",
+            "startdescription": "Today I will close the shop, and see what I can make.",
+            "description": "I have created something. I am not sure what it does. But perhaps it will be worth some money, to someone.",
+            "aspects": { "employment": 1 },
+            "requirements": {
+                "workshop": 1,
+                "reason": 1,
+                "funds": 1
+            },
+            "deckeffects": { "clockshop.gadgetlist.basic": 1 },
+            "warmup": 50,
+            "craftable": true
         }
     ]
 }

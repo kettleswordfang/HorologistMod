@@ -77,6 +77,7 @@
             "id": "clockshop_insanity",
             "actionid": "clockshop_insanity",
             "label": "clockshop_insanity",
+            "icon": "visions",
             "startdescription": "He has taken the blueprint and locked the door to the workshop. Perhaps if I could find my own key...",
             "description": "base end clockshop_insanity description.",
             "warmup": 15,
@@ -96,6 +97,7 @@
             "id": "clockshop_insanity_success",
             "actionid": "clockshop_insanity",
             "label": "insanity success!",
+            "icon": "visions",
             "startdescription": "I will show him the truth of how mechnical bees fly, of how mechanical men will no longer feel. I will show him everything that is possible and more. His mind will snap.",
             "description": "Completed insanity success msg.",
             "warmup": 30,
@@ -105,12 +107,13 @@
                 "mechblueprint3": 1,
                 "notoriety": 1
             },
-            "linked": [ { "id": "desire.horologist.open" } ]
+            "linked": [ { "id": "desire_horologist_open" } ]
         },
         {
             "id": "clockshop_insanity_failure",
             "actionid": "clockshop_insanity",
             "label": "insanity failure!",
+            "icon": "visions",
             "description": "insanity failure msg - he's angry, you're wasting time.",
             "effects": {
                 "father.horologist.base": -1,
@@ -119,8 +122,8 @@
             }
         },
         {
-            "id": "desire.horologist.open",
-            "actionid": "desire.horologist.open",
+            "id": "desire_horologist_open",
+            "actionid": "desire_horologist_open",
             "label": "Now I Am Alone",
             "startdescription": "Finally I have the workshop to myself. Free from distraction.",
             "description": "I have poured over the blueprints. Studied the paths. Mapped out the upgrades. It is time to make myself something more.",
