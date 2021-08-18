@@ -1,7 +1,18 @@
 {
     "recipes": [
         {
-            "id": "clockshophint1",
+            "id": "clockshophintP",
+            "actionid": "work",
+            "label": "Labour as repetitive as the tick of the second hand.",
+            "requirements": {
+                "clockshop.parttime": 1
+            },
+            "startdescription": "I do no more than clean parts and take orders.",
+            "craftable": false,
+            "hintonly": true
+        },
+        {
+            "id": "clockshophintF",
             "actionid": "work",
             "label": "Spend Time on Labour or Research?",
             "requirements": {
@@ -43,7 +54,7 @@
             "id": "work.horologist.parttime",
             "actionid": "work",
             "label": "As repetitive as the tick of the second hand.",
-            "startdescription": "I do no more than clean parts and take orders.",
+            "startdescription": "I do no more than clean parts and take orders. I do not even have my own key to the shop.",
             "description": "No matter how I push myself, my father is never satisfied.",
             "aspects": {
                 "employment": 1

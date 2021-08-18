@@ -3,9 +3,9 @@
         {
             "id": "dream.horologist.open",
             "actionid": "dream",
-            "label": "More Machine Than Human",
+            "label": "More Machine Than Human?",
             "startdescription": "The ticking of the clocks pervade my dreams, matching with the beat of my heart.",
-            "description": "Sometimes, in my dreams, my heartbeat is the last sound that I hear before I wake. But sometimes, that beat is replaced with something else and I awake from the constraints of the emotional toil of the day, refreshed in spirit.",
+            "description": "Sometimes, in my dreams, my heartbeat is the last sound that I hear before I wake. But sometimes that beat is replaced with something else and I awake from the constraints of the emotional toil of the day, refreshed in spirit.",
             "effects": {
                 "passion": 1
             },
@@ -16,7 +16,7 @@
             "actionid": "talk",
             "label": "Responsibility, But Not Trust",
             "startdescription": "Father hints at one day giving over the store to me, but I cannot help but feel this will never happen...",
-            "description": "He doesn't trust me. But he never gives me the opportunities to earn that trust. And so the hour clock comes back to 12 but the date never changes.",
+            "description": "He doesn't trust me. But he never gives me the opportunities to earn that trust. And so the hour hand comes back to 12 but the date never changes.",
             "effects": {
                 "father.horologist.base": 1
             },
@@ -27,7 +27,7 @@
             "actionid": "explore",
             "label": "A Dealer in Junk",
             "startdescription": "Somewhere in the city is father's old aquiantance, Oriflamme, who from time to time buys the clocks that do not sell in the shop.",
-            "description": "There are far more than unsold mechanisms here. Something about the items on display calls to me.",
+            "description": "There are far more than unsold mechanisms here! Something about the items on display calls to me.",
             "effects": {
                 "locationauctionhouse": 1
             },
@@ -37,7 +37,7 @@
             "id": "dream.mechbook.first",
             "actionid": "dream",
             "label": "Read to Fall Asleep",
-            "startdescription": "This nonsense seems like the perfect thing to send you to sleep.",
+            "startdescription": "This nonsense seems like the perfect thing to send me to sleep.",
             "description": "You dream of a world that is made from clockwork, the sun moving across the sky on iron tracks as it hisses steam. On a moving pedestal is the book you were just reading. It unfolds like copper origami and reveals its secrets to you.",
             "requirements": {
                 "mechbook": 1
@@ -71,7 +71,20 @@
                 "mechblueprint1": 1
             },
             "warmup": 30,
-            "craftable": true
+            "maxexecutions": 1
+        },
+        {
+            "id": "study.mechbook",
+            "actionid": "study",
+            "label": "A Secret in the Synopsis",
+            "startdescription": "Maybe there is more to this book than I thought...",
+            "description": "Nothing but nonsense. I am wasting my time.",
+            "effects": {
+                "restlessness": 1
+            },
+            "warmup": 30,
+            "craftable": true,
+            "maxexecutions": 1
         },
         {
             "id": "clockshop_insanity",

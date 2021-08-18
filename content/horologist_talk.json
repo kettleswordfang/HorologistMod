@@ -70,6 +70,27 @@
             ]
         },
         {
+            "id": "fatherchat_explorechat_full",
+            "label": "Ask What the Store Needs",
+            "actionid": "talk",
+            "maxexecutions": 1,
+            "requirements": {
+                "father.horologist.base": 1,
+                "clockshop.fulltime": 1
+            },
+            "startdescription": "'I am sure I can think of something you won't mess up.'",
+            "description": "He has given me junk to sell. An old tome of nonsensical designs that was left in the store by a madman. I have been reduced to a courier.",
+            "effects": {
+                "mechbook": 1
+            },
+            "alt": [
+                {
+                    "id": "explore.horologist.open",
+                    "additional": true
+                }
+            ]
+        },
+        {
             "id": "fatherchat_health",
             "label": "Offer To Clean the Store",
             "actionid": "talk",
@@ -104,6 +125,7 @@
                 "father.horologist.base": 1,
                 "passion": 1
             },
+            "startdescription": "'Perhaps I can spare a little time for you.",
             "description": "Sometimes you can catch him in a good mood and, for a moment, it is like he remembers he has a child.",
             "effects": {
                 "fund": 1
@@ -116,6 +138,7 @@
                 "father.horologist.base": 1,
                 "passion": 1
             },
+            "startdescription": "'Perhaps I can spare a little time for you.",
             "description": "Sometimes it is like he forgets he has a child."
         },
         {
