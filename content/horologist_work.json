@@ -50,7 +50,7 @@
             "linked" : [
                 {
                     "id": "clockshop_upgradetofull",
-                    "chance": 33
+                    "chance": 40
                 }
             ]
         },
@@ -62,9 +62,10 @@
             "description": "You hold in your hands the keys to the workshop. An iota of trust.",
             "warmup": 30,
             "effects": {
-                "funds": 2,
+                "funds": 1,
                 "clockshop.parttime": -1,
-                "clockshop.fulltime": 1
+                "clockshop.fulltime": 1,
+                "erudition": 1
             }
         },
         {
@@ -226,7 +227,25 @@
             },
             "linked": [
                 { "id": "warehousemove_leadup" }
+            ],
+            "alt": [
+                {   "id": "expelfatigue_moving",
+                    "additional": true,
+                    "expulsion" : {
+                        "filter": { "fatigue": 1 },
+                        "limit": 1
+                    },
+                    "additional": true
+                }
             ]
+        },
+        {
+            "id": "expelfatigue_moving",
+            "actionid": "expelfatigue_moving",
+            "label": "[moving is tiring i guess]",
+            "startdescription": "[start description.]",
+            "description": "[being tired finished now.]",
+            "warmup": 45
         },
         {
             "id": "warehousemove_leadup",
@@ -274,15 +293,15 @@
             "requirements": 
                 {
                     "hq.warehouse.potential": 1,
-                    "clockshop.upgraded": 1,
-                    "fatigue": 1
+                    "clockshop.upgraded": 1
                 },
             "warmup": 15,
             "slots": [
                 {
                     "id": "warehousefunds1",
                     "label": "Moving isn't cheap.",
-                    "required": { "funds": 1 }
+                    "required": { "funds": 1 },
+                    "greedy": true
                 }
             ],
             "linked": [
@@ -299,8 +318,10 @@
             "requirements": { "funds": 1 },
             "effects": {
                 "clockshop.upgraded": -1,
+                "hq.warehouse.potential": -1,
                 "clockshop.warehouse": 1,
-                "contentment": 1
+                "contentment": 1,
+                "funds": -1
             }
         }
     ]

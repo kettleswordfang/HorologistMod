@@ -61,6 +61,12 @@
             "label": "More Machine than Human",
             "isAspect": true,
             "description": "What I seek is beyond immortality. Beyond pain. Beyond emotion."
+        },
+        {
+            "id": "wormavatar_shadow",
+            "unique": true,
+            "label": "Shadows of Nephrite",
+            "description": "[This is the Mysterious Stranger 1]."
         }
     ]
 }

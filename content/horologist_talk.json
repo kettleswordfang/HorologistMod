@@ -32,7 +32,7 @@
                 },
                 {
                     "id": "fatherchat_passion_fund",
-                    "chance": 50
+                    "chance": 45
                 },
                 {
                     "id": "fatherchat_passion_failure"
@@ -131,7 +131,9 @@
             "startdescription": "'Perhaps I can spare a little time for you.",
             "description": "Sometimes you can catch him in a good mood and, for a moment, it is like he remembers he has a child.",
             "effects": {
-                "fund": 1
+                "funds": 1,
+                "passion": -1,
+                "passionexhausted": 1
             }
         },
         {
@@ -142,7 +144,11 @@
                 "passion": 1
             },
             "startdescription": "'Perhaps I can spare a little time for you.",
-            "description": "Sometimes it is like he forgets he has a child."
+            "description": "Sometimes it is like he forgets he has a child.",
+            "effects": {
+                "passion": -1,
+                "passionexhausted": 1
+            }
         },
         {
             "id": "fatherchat_demotion",
@@ -163,7 +169,7 @@
             "actionid": "talk",
             "startdescription": "'Fine. Show me that you can be trusted.'",
             "comments": "this desc still shows when success runs!",
-            "warmup": 30,
+            "warmup": 15,
             "slots": [
                 {
                     "id": "demotion_solve",

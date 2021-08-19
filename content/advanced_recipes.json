@@ -1,0 +1,33 @@
+{
+    "recipes": [
+        {
+            "id": "golem.blank.basic",
+            "actionid": "work",
+            "label": "Create a Clockwork Golem",
+            "startdescription": "The work will be difficult, and long, but I believe I can do this.",
+            "description": "Something in the process went wrong this time. All I can do is try again. [You failed this Lore Challenge.]",
+            "aspects": { "employment": 1 },
+            "craftable": true,
+            "requirements": {
+                "workshop": 1,
+                "compensationvalue": 2,
+                "lore": 1,
+                "secrethistories": 2
+            },
+            "warmup": 90,
+            "alt": [
+                {
+                    "id": "golembuild_sh",
+                    "challenges": { "secrethistories": "base" }
+                }
+            ]
+        },
+        {
+            "id": "golembuild_sh",
+            "comments": "should work like painting, with a lot of flavour links.",
+            "actionid": "work",
+            "label": "It's Alive!",
+            "description": "Golem Build Successful."
+        }
+    ]
+}

@@ -77,8 +77,8 @@
                     "id": "workshopmaterial2",
                     "label": "More?",
                     "required": {
-                        "reason": 1,
-                        "health": 1,
+                        "erudition": 1,
+                        "vitality": 1,
                         "funds": 1
                     },
                     "actionid": "work",
@@ -111,8 +111,10 @@
                     "id": "workshopmaterial2",
                     "label": "Tools",
                     "required": {
-                        "reason": 1,
+                        "vitality": 1,
+                        "erudition": 1,
                         "funds": 1,
+                        "compensationvalue": 1,
                         "tool": 1
                     },
                     "actionid": "work",

@@ -71,6 +71,13 @@
             "effects": {
                 "mechblueprint1": 1
             },
+            "slots": [
+                {   "id": "mechbook",
+                    "label": "Something Hidden",
+                    "required": { "mechbook": 1 },
+                    "greedy": 1
+                }
+            ],
             "warmup": 30,
             "maxexecutions": 1
         },

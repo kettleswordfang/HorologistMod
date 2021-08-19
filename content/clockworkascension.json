@@ -1,0 +1,57 @@
+{
+    "recipes": [
+        {
+            "id": "ambition",
+            "slots": [
+                {
+                    "id": "Obsessions",
+                    "label": "Obsessions",
+                    "description": "Deeper urges",
+                    "required": {
+                        "enlightenmentmarks": 3,
+                        "powermarks": 3,
+                        "sensationmarks": 3,
+                        "remembrancemarks": 2,
+                        "changemarks": 1,
+                        "independent": 1,
+                        "resentment": 3,
+                        "mentor": 1,
+                        "clockworkmarks": 1
+                    },
+                    "greedy": true
+                }
+            ],
+            "linked": [
+                {
+                    "id": "CW_ascension_checks",
+                    "chance": 100
+                },
+            ],
+        },
+        {
+            "id": "CW_ascension_checks",
+            "actionid": "ambition",
+            "label": "More Than Machine",
+            "requirements": { "clockworkmarks": 1},
+            "startdescription": "Something inside me beats, but it is not my heart.",
+            "warmup": 30,
+            "linked": [
+                {   "id": "CW_ascension_begin",
+                    "chance": 100
+                }
+            ]
+        },
+        {
+            "id": "CW_ascension_begin",
+            "maxexecutions": 1,
+            "warmup": 30,
+            "startdescription": "The tick of the clock is irregular, like something pushes against the internals mechanisms...",
+            "description": "[Clockwork obstacles have begun.]",
+            "extantreqs": {
+                "father.horologist.insane": -1,
+                "father.horologist.base": -1
+            },
+            "effects": { "wormavatar_shadow": 1 }
+        }
+    ]
+}
