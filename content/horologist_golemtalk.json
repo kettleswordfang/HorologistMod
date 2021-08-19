@@ -1,0 +1,67 @@
+{
+    "recipes": [
+        { 
+            "id": "golemchat_start",
+            "actionid": "talk",
+            "label": "Give Orders to a Golem",
+            "startdescription": "startdescription",
+            "description": "description",
+            "warmup": 15,
+            "requirements":
+                { "golem": 1 },
+            "craftable": true,
+            "linked": [
+                { "id": "golemchat_request" }
+            ]
+        },
+        {
+            "id": "golemchat_request",
+            "actionid": "talk",
+            "label": "label",
+            "startdescription": "startdescription",
+            "description": "description",
+            "warmup": 30,
+            "slots": [
+                {
+                    "id": "golemorders",
+                    "label": "Orders?",
+                    "description": "I could subtly alter the mechanisms within the golem."
+                },
+            ],
+            "linked": [
+                { "id": "golemchat_attunemoth" },
+                { "id": "golemchat_moth_raid" }
+            ]
+        },
+        {
+            "id": "golemchat_attunemoth",
+            "label": "Attune a Golem to Infiltration",
+            "actionid": "talk",
+            "requirements": {
+                "moth": 4
+            },
+            "startdescription": "I can instruct this golem in the ways of stealth, and of secrecy, using the teachings of the Principle of The Moth.",
+            "description": "I have attuned this golem to the aspect of Moth.",
+            "effects": {
+                "blankgolem": -1,
+                "mothgolem": 1,
+                "influencemoth": 1
+            },
+            "warmup": 60,
+            "craftable": true
+        },
+        {
+            "id": "golemchat_moth_raid",
+            "label": "Stake Out the Suppression Bureau",
+            "actionid": "talk",
+            "warmup": 60,
+            "requirements": {
+                "mothgolem": 1,
+                "clockworkmarks": 1
+            },
+            "startdescription": "I have sent the golem out to watch those who watch me.",
+            "description": "It has come back with a plan. Entry points, the latest guard schedules, and a list of what might be found within.",
+            "effects": { "infiltrationcommands": 1 }
+        }
+    ]
+}

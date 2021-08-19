@@ -75,7 +75,7 @@
                 {   "id": "mechbook",
                     "label": "Something Hidden",
                     "required": { "mechbook": 1 },
-                    "greedy": 1
+                    "greedy": true
                 }
             ],
             "warmup": 30,
@@ -107,7 +107,7 @@
                     "id": "workshop_request",
                     "label": "The Workshop",
                     "description": "Follow him in?"
-                },
+                }
             ],
             "linked": [
                 { "id": "clockshop_insanity_success" },

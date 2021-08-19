@@ -67,7 +67,11 @@
             "unique": true,
             "label": "Shadows of Nephrite",
             "description": "[This is the Mysterious Stranger 1]."
+        },
+        {
+            "id": "infiltrationcommands",
+            "label": "Infiltration Commands",
+            "description": "This set of documents lays out what may be found within the Suppression Bureau; evidence in storage, confiscated equipment and documents, and those who have already been suppressed."
         }
     ]
 }
-

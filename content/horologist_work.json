@@ -137,7 +137,7 @@
             "linked": [
                 {
                     "id": "workshop_request_funds_success",
-                    "chance": 50
+                    "chance": 75
                 },
                 { 
                     "id": "workshop_request_funds_failure"

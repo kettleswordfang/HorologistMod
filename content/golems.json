@@ -1,0 +1,99 @@
+{
+    "elements": [
+        {
+            "id": "golem",
+            "label": "Golem",
+            "isAspect": true,
+            "description": "A creature made of clockwork."
+        },
+        {
+            "id": "blankgolem",
+            "label": "An Unattuned Golem",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1
+            },
+            "description": "[a blank golem]."
+        },
+        {
+            "id": "mothgolem",
+            "label": "A Golem of Infiltration",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "moth": 2
+            },
+            "description": "[a moth golem]."
+        },
+        {
+            "id": "edgegolem",
+            "label": "A Golem of Conflict",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "edge": 1
+            },
+            "description": "[an edge golem]."
+        },
+        {
+            "id": "lanterngolem",
+            "label": "A Golem of Glory",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "lantern": 1
+            },
+            "description": "[a lantern golem]."
+        },
+        {
+            "id": "forgegolem",
+            "label": "A Golem of Mayhem",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "forge": 1
+            },
+            "description": "[a forge golem]."
+        },
+        {
+            "id": "wintergolem",
+            "label": "A Golem of Silence",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "winter": 1
+            },
+            "description": "[a winter golem]."
+        },
+        {
+            "id": "heartgolem",
+            "label": "A Golem of Continuation",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "heart": 1
+            },
+            "description": "[a heart golem]."
+        },
+        {
+            "id": "grailgolem",
+            "label": "A Golem of Charism",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "grail": 1
+            },
+            "description": "[a grail golem]."
+        },
+        {
+            "id": "knockgolem",
+            "label": "A Golem of Dreaming",
+            "aspects": {
+                "golem": 1,
+                "mortal": 1,
+                "knock": 1
+            },
+            "description": "[a knock golem]."
+        }
+    ]
+}
